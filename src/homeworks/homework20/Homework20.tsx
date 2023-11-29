@@ -14,7 +14,7 @@ function Homework20() {
 
   const showProgramLangs = programLangs.map((el: string) => {
     return (
-      <li>
+      <li key={`arrLangs-el-${Math.random()}`}>
         {el}
       </li>
       );
