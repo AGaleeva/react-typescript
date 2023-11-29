@@ -1,9 +1,10 @@
 import './App.css';
+import Lesson20 from './lessons/lesson20';
 
 function App() {
   return (
-    <div className="App">
-      TypeScriptApp
+    <div className="App">      
+      <Lesson20 />    
     </div>
   );
 }
