@@ -12,7 +12,7 @@ function Homework20() {
 
   let programLangs: string[] = ['JavaScript', 'Python', 'Scala'] // 'Machine Learning' === 'Python' :)))
 
-  const showProgramLangs = programLangs.map((el) => {
+  const showProgramLangs = programLangs.map((el: string) => {
     return (
       <li>
         {el}
