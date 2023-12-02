@@ -3,13 +3,13 @@ import Button from '../../components/button';
 import './styles.css';
 
 function Homework21() {
-  let [likes, setLikes] = useState<number>(0);
+  const [likes, setLikes] = useState<number>(0);
 
   const plusLikes = (): void => {    
     setLikes((prevValue: number) => prevValue + 1)
   };
   
-  let [dislikes, setDislikes] = useState<number>(10);
+  const [dislikes, setDislikes] = useState<number>(10);
 
   const minusDislikes = (): void => {
     setDislikes((prevValue: number) => prevValue - 1)
@@ -25,7 +25,7 @@ function Homework21() {
       <div className='likes'>
         {dislikes > 0 && <div>{dislikes}</div>}
       </div>  
-      <button type='button' onClick = {(): void => minusDislikes()}>
+      <button type='button' onClick = {minusDislikes}>
         <img className='likesControl' src="https://smile-emoji.ru/wp-content/uploads/site-images/simvol-vk/v33svuzr.png" alt="thumb-down" />
       </button>
       <div className='buttonControl'>
@@ -35,7 +35,7 @@ function Homework21() {
           onClick={resResults}
         />
       </div>
-      <button type='button' onClick = {(): void => plusLikes()}>
+      <button type='button' onClick = {plusLikes}>
         <img className='likesControl' src="https://cdn-0.emojis.wiki/emoji-pics/whatsapp/thumbs-up-whatsapp.png" alt="thumb-up" />
       </button>
       <div className='likes'>    
