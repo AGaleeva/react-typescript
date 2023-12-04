@@ -1,11 +1,11 @@
 import './styles.css'
 
-interface buttonProps {
+interface ButtonProps {
   name: string; 
   resResults: () => void;
 }
 
-function Button({name, resResults}: buttonProps) {
+function Button({name, resResults}: ButtonProps) {
   return (
     <button className='button-component' onClick = {resResults}>
       {name}    
