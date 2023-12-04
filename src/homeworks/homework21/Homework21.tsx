@@ -30,9 +30,8 @@ function Homework21() {
       </button>
       <div className='buttonControl'>
         <Button 
-          name='Reset results'
-          type='button'
-          onClick={resResults}
+          name="Reset results"          
+          resResults={resResults}
         />
       </div>
       <button type='button' onClick = {plusLikes}>

@@ -1,15 +1,14 @@
 import './styles.css'
 
 interface buttonProps {
-  name: string;
-  type: string;
-  onClick: () => void;
+  name: string; 
+  resResults: () => void;
 }
 
-function Button({name, type, onClick}: buttonProps) {
+function Button({name, resResults}: buttonProps) {
   return (
-    <button className='button-component'>
-      {name}
+    <button className='button-component' onClick = {resResults}>
+      {name}    
     </button>
   );
 }
