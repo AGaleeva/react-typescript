@@ -5,7 +5,8 @@ interface ButtonComponentProps {
 }
 
 export const ButtonComponent = styled.button<ButtonComponentProps>`  
-  width: fit-content;
+  width: 100%;
+  min-height: 50px;
   height: fit-content;
   padding: 6px 10px;
   outline: none;
@@ -15,5 +16,6 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   background-color: ${(props) => props.disabled ? 'grey' : 'blue'}; // = background-color: ${({disabled}) => disabled ? 'grey' : 'blue'}
   color: ${({$isRedFont}) => $isRedFont ? 'red' : 'white'};  
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 14px;  
+  font-weight: bolder;
 `;
