@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { colors } from 'styles/colors'
+
 export const Homework22Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@ export const Homework22Wrapper = styled.div`
   padding: 100px;
   width: 100%;
   height: 100%;
-  background-color: rgb(26, 35, 53);
+  background-color: ${colors.primary};
 `;
 
 export const LoginCard = styled.form`

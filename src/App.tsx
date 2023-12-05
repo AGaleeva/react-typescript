@@ -1,4 +1,5 @@
-import './App.css';
+import GlobalStyles from 'styles/GlobalStyles';
+// мы избавились от импорта из App.css и заменили их styled компонентом GlobalStyles
 import Lesson20 from './lessons/lesson20';
 import Homework20 from './homeworks/homework20';
 import Lesson21 from './lessons/lesson21';
@@ -8,7 +9,9 @@ import Homework22 from 'homeworks/homework22';
 
 function App() {
   return (
-    <div className="App">      
+    <>
+    <GlobalStyles />
+    {/* <div className="App"> */}
       {/* <Lesson20 />  */}
       {/* <Lesson21 /> */}
       {/* <Lesson22 /> */}
@@ -16,7 +19,8 @@ function App() {
       {/* <Homework20 /> */}
       {/* <Homework21 /> */}
       <Homework22 />
-    </div>
+    {/* </div> */}
+    </>
   );
 }
 
