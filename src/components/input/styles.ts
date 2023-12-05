@@ -9,7 +9,7 @@ export const InputContainer = styled.div`
 
 export const InputLabel = styled.label`
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   color: black;
 `;
 
@@ -18,7 +18,7 @@ export const InputComponent = styled.input`
   height: 50px;
   padding: 6px 10px;
   outline: none;  
-  border-radius: 7px;
+  border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.59);
   background-color: ${({disabled}) => disabled ? 'lightgrey' : 'white'};    
   cursor: ${({disabled}) => disabled ? 'not-allowed' : 'default'};    
