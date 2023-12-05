@@ -1,16 +1,19 @@
 import { InputProps } from './types'
-import { InputComponent } from './styles'
+import { InputContainer, InputLabel, InputComponent } from './styles'
 
-function Input({ placeholder, disabled, label }: InputProps) {
+function Input({ placeholder, disabled, label, name }: InputProps) {
+  const inputID = `${name}-${Math.random()}`;
   return (
-    <div>
-      <label>{label}</label>
+    <InputContainer>
+      <InputLabel htmlFor={inputID}>{label}</InputLabel>
       <InputComponent
+        id={inputID}
+        name={name}
         type="text"
         placeholder={placeholder}
         disabled={disabled}
       />
-    </div>
+    </InputContainer>
   );
 }
 
