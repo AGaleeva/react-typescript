@@ -5,14 +5,14 @@ import Input from 'components/input';
 import { Lesson24Wrapper, Text, Card } from "./styles";
 
 function Lesson24() {
-  const [firstName, setFirstName] = useState<string>("");
+  const [inputText, setInputText] = useState<string>("");
   const [catFact, setCatFact] = useState<string | undefined>(undefined);
   const [catError, setCatError] = useState<string | undefined>(undefined);
 
   const lesson24: string = "Lesson 24";
 
-  const onChangeFirstNameValue = (event: ChangeEvent<HTMLInputElement>) => {
-    setFirstName(event.target.value);
+  const onChangeInputTextValue = (event: ChangeEvent<HTMLInputElement>) => {
+    setInputText(event.target.value);
   };
 
   const getCatFacts = async () => {
@@ -39,7 +39,7 @@ function Lesson24() {
   useEffect(() => {
     console.log("component Lesson24 has updated");
     getCatFacts();
-  }, [firstName]);
+  }, [inputText]);
 
   // Lifecycle method: Unmounting of the component ('dying')
   useEffect(() => {
@@ -54,9 +54,9 @@ function Lesson24() {
         <Text>{lesson24}</Text>
         <Input
           label="Get new fact about cat on every inputed symbol"
-          name="firstName"
-          value={firstName}
-          onChange={onChangeFirstNameValue}
+          name="inputText"
+          value={inputText}
+          onChange={onChangeInputTextValue}
         />
 
         <Text>Facts about cats: </Text>
