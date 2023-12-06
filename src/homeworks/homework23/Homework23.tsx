@@ -25,7 +25,7 @@ function Homework23() {
     setPositionValue(event.target.value);
     // console.log(event.target.value);
   }
-    
+      
   return (  
     <Homework23Wrapper>
       <LoginCard>
@@ -63,7 +63,7 @@ function Homework23() {
         />
         <Button 
           name={'Create personal card'} 
-          type='button'
+          // type='submit'
           onClick={() => {
             return (
               <LoginCard>
