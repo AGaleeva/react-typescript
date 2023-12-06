@@ -13,9 +13,9 @@ function Homework24() {
     if (response.ok) {
       const data = await response.json();
       setJoke(data.setup); 
-      setTimeout(() => alert("You got a new joke"), 10);        
+      setTimeout(() => alert("You got a new joke"), 0);        
     } else {
-      setTimeout(() => alert(setJokeError("Some error occured")), 0);
+      setTimeout(() => alert("Some error occured"), 0);
     }
 
   };
