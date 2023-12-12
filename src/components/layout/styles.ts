@@ -15,8 +15,8 @@ export const Header = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 70px;
-  padding: 20px;
+  height: 80px;
+  padding: 10px 30px;
   background-color: ${colors.primary};
   color: ${colors.white};
 `;
@@ -27,9 +27,30 @@ export const NavContainer = styled.nav`
   align-items: center;  
 `;
 
+export const NavContainerCol = styled.nav`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+`;
+
 export const StyledLink = styled(NavLink)`
   color: ${colors.white};
   font-size: 20px;
+`;
+
+export const ImgContainer = styled.div`
+  width: 50px;
+  height: 50px; 
+  & img {
+    height: 100%;
+    width: 100%;
+  }   
+`;
+
+export const StyledImgLink = styled(NavLink)`
+  width: 50px;
+  height: 50px;   
 `;
 
 export const Main = styled.div`
@@ -43,7 +64,7 @@ export const Main = styled.div`
 export const Footer = styled.div`
   display: flex;
   width: 100%;
-  height: 100px;
+  height: fit-content;
   padding: 20px;
   background-color: ${colors.primary};
   color: ${colors.white};

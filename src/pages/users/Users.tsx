@@ -1,7 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 import Button from "components/button";
 
-import { UsersWrapper } from "./styles";
+import { UsersWrapper, ButtonContainer } from "./styles";
 
 function Users() {
   const navigate = useNavigate();
@@ -13,9 +13,11 @@ function Users() {
   return (
     <UsersWrapper>
       Users
-      <Button name="Go to Homepage" onClick={goToHomepage} />
+      <ButtonContainer>
+        <Button name="Go to Homepage" onClick={goToHomepage} />
+      </ButtonContainer>
     </UsersWrapper>
-    )
+  );
 }
 
 export default Users;

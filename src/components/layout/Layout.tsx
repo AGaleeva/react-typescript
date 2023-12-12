@@ -1,24 +1,83 @@
 import { useLocation } from 'react-router-dom';
 import { LayoutProps } from "./types";
-import { LayoutWrapper, Header, Main, Footer, NavContainer, StyledLink } from "./styles";
+import {
+  LayoutWrapper,
+  Header,
+  Main,
+  Footer,
+  NavContainer,
+  StyledLink,
+  ImgContainer,
+  StyledImgLink,
+  NavContainerCol,
+} from "./styles";
+import LogoIcon from '../../assets/github_270798.png';
+import { colors } from '../../styles/colors';
 
 function Layout({children}: LayoutProps) {
 
-  const location = useLocation();
+  const location = useLocation();  
 
   return (
     <LayoutWrapper>
       <Header>
-        Logo
+        <ImgContainer>
+          <StyledImgLink to="/">
+            <img src={LogoIcon} alt="Logo" />
+          </StyledImgLink>
+        </ImgContainer>
         <NavContainer>
-          <StyledLink style={({ isActive }) => ({ color: isActive ? 'lightblue' : 'white' })} to="/">Home</StyledLink>
-          <StyledLink style={({ isActive }) => ({ color: isActive ? 'lightblue' : 'white' })} to="/users">Users</StyledLink>
-          <StyledLink style={({ isActive }) => ({ color: isActive ? 'lightblue' : 'white' })} to="/clients">Clients</StyledLink>
-          <StyledLink style={({ isActive }) => ({ color: isActive ? 'lightblue' : 'white' })} to="/about">About</StyledLink>
+          <StyledLink
+            style={({ isActive }) => ({
+              color: isActive ? `${colors.midleBlue}` : "white",
+            })}
+            to="/"
+          >
+            Home
+          </StyledLink>
+          <StyledLink
+            style={({ isActive }) => ({
+              color: isActive ? `${colors.midleBlue}` : "white",
+            })}
+            to="/users"
+          >
+            Users
+          </StyledLink>
+          <StyledLink
+            style={({ isActive }) => ({
+              color: isActive ? `${colors.midleBlue}` : "white",
+            })}
+            to="/clients"
+          >
+            Clients
+          </StyledLink>
+          <StyledLink
+            style={({ isActive }) => ({
+              color: isActive ? `${colors.midleBlue}` : "white",
+            })}
+            to="/about"
+          >
+            About
+          </StyledLink>
         </NavContainer>
       </Header>
       <Main>{children}</Main>
-      <Footer>Footer</Footer>
+      <Footer>
+        <NavContainerCol>
+          <StyledLink style={({ isActive }) => ({
+              color: isActive ? `${colors.midleBlue}` : "white",
+            })} to={"/"}>Home</StyledLink>
+          <StyledLink style={({ isActive }) => ({
+              color: isActive ? `${colors.midleBlue}` : "white",
+            })} to={"/users"}>Users</StyledLink>
+          <StyledLink style={({ isActive }) => ({
+              color: isActive ? `${colors.midleBlue}` : "white",
+            })} to={"/about"}>About</StyledLink>
+          <StyledLink style={({ isActive }) => ({
+              color: isActive ? `${colors.midleBlue}` : "white",
+            })} to={"/clients"}>Clients</StyledLink>
+        </NavContainerCol>
+      </Footer>
     </LayoutWrapper>
   );
 }

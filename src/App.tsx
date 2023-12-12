@@ -17,6 +17,8 @@ import About from 'pages/about';
 import Home from 'pages/home';
 import Users from 'pages/users';
 import Clients from 'pages/clients';
+import { Apple, Facebook, Sega } from "pages/clients/modules";
+import Lesson27 from 'lessons/lesson27'; // вставим вместо компонента <Home />
 
 function App() {
   return (
@@ -24,11 +26,16 @@ function App() {
       <GlobalStyles />
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Lesson27 />} /> 
           <Route path="/users" element={<Users />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/about" element={<About />} />
-          <Route path='*' element='Page Not Found' />
+          <Route path="/clients" element={<Clients />} />
+          <Route path="/clients/apple" element={<Apple />} />
+          <Route path="/clients/facebook" element={<Facebook />} />
+          <Route path="/clients/sega" element={<Sega />} />
+          <Route path="*" element="Page Not Found" />
+          {/* <Route path="/clients/scrum" element={<Scrum />} /> */}
         </Routes>
         {/* <div className="App"> */}
         {/* <Lesson20 />  */}
