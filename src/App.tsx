@@ -19,14 +19,17 @@ import Users from 'pages/users';
 import Clients from 'pages/clients';
 import { Apple, Facebook, Sega } from "pages/clients/modules";
 import Lesson27 from 'lessons/lesson27'; // вставим вместо компонента <Home />
+import Homework27 from 'homeworks/homework27'; // вставим вместо компонента <Lesson27 />
+import Weather from 'pages/weather';
 
 function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
+      {/* <Weather /> */}
       <Layout>
         <Routes>
-          <Route path="/" element={<Lesson27 />} /> 
+          <Route path="/" element={<Lesson27 />} />
           <Route path="/users" element={<Users />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/about" element={<About />} />
@@ -35,7 +38,6 @@ function App() {
           <Route path="/clients/facebook" element={<Facebook />} />
           <Route path="/clients/sega" element={<Sega />} />
           <Route path="*" element="Page Not Found" />
-          {/* <Route path="/clients/scrum" element={<Scrum />} /> */}
         </Routes>
         {/* <div className="App"> */}
         {/* <Lesson20 />  */}

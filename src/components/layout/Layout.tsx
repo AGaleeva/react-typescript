@@ -11,7 +11,7 @@ import {
   StyledImgLink,
   NavContainerCol,
 } from "./styles";
-import LogoIcon from '../../assets/github_270798.png';
+import LogoIcon from 'assets/github_270798.png';
 import { colors } from '../../styles/colors';
 
 function Layout({children}: LayoutProps) {

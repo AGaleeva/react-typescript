@@ -18,7 +18,7 @@ export const InputLabel = styled.label`
 `;
 
 export const InputComponent = styled.input<InputComponentProps>`  
-  width: 100%;
+  width: 500px;
   height: 50px;
   padding: 6px 10px;
   outline: none;  

@@ -6,7 +6,7 @@ function Facebook() {
   const navigate = useNavigate();
 
   const goBack = () => {
-    navigate(-1); // "/clients"
+    navigate(-1); // (-1) === ("/clients"), в данной ситуации они равны, но -1 дает навигацию именно на предыдущую стр.
   };
 
   return (
